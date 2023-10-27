@@ -31,3 +31,5 @@ class Enemy(GameObject):
     def move(self):
         self.x += self.direction[0] * self.speed
         self.y += self.direction[1] * self.speed
+    def get_hitbox(self):
+        return pygame.Rect(self.x, self.y, self.width, self.height)
